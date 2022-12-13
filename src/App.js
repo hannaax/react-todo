@@ -1,5 +1,3 @@
-// https://youtu.be/EbnmosN64JQ
-
 import {React,useState,useEffect} from 'react';
 import logo from './logo.svg';
 import './App.css';
@@ -13,7 +11,7 @@ function App() {
   const [editingText, setEditingText] = useState("");
 
   // local-storage 시작
-  // 따라 쳤는데 작동 안됨
+  // 작동 안됨
   // edit 기능과 useEffect를 통한 local-storage 기능에 대해 더 알아보기
   useEffect(() => {
     const temp = localStorage.getItem("todos")
@@ -49,7 +47,7 @@ function App() {
   }
 
   const toggleComplete = (id) => {
-    const updatedTodos = [...todos].map((todo) => {  // 고차함수 앞에 array를 왜굳이 구조분해할당해서 받아오는지 이해못하겠다
+    const updatedTodos = [...todos].map((todo) => {  // 고차함수 앞에 array를 굳이 구조분해할당해서 받아오는지 이해못하겠다
       if(todo.id === id) {
         todo.completed = !todo.completed
       }
